@@ -1,0 +1,25 @@
+--Create a Department Store Database
+
+CREATE TABLE Store(ID INTEGER PRIMARY KEY, Item TEXT,Quantity INTEGER, Price INTEGER, Popularity INTEGER);
+INSERT INTO store VALUES(1,"Jackets",103,30.99,8.4);
+INSERT INTO store VALUES(2,"Pants",98,25.99,7);
+INSERT INTO store VALUES(3,"Blouses",112,17.99,7.2);
+INSERT INTO store VALUES(4,"Socks",99,4.99,3);
+INSERT INTO store VALUES(5,"Belts",113,8.99,5.4);
+INSERT INTO store VALUES(6,"Ties",78,6.99,2.8);
+INSERT INTO store VALUES(7,"Scarves",70,6.25,7.9);
+INSERT INTO store VALUES(8,"T-Shirts",88,10.99,9.8);
+INSERT INTO store VALUES(9,"Watches",23,20.25,8.7);
+INSERT INTO store VALUES(10,"Rings",77,23.99,8.1);
+INSERT INTO store VALUES(11,"Hairbands",45,6.99,4.9);
+INSERT INTO store VALUES(12,"Hats",26,12.99,9.4);
+INSERT INTO store VALUES(13,"Boots",86,60.99,10);
+INSERT INTO store VALUES(14,"Necklaces",27,16.99,7.6);
+INSERT INTO store VALUES(15,"Earrings",45,15.25,9.8);
+SELECT * FROM Store
+
+--Display database ordered by Popularity
+ORDER BY Popularity ASC;
+
+--Display average price of store items
+SELECT AVG(Price)FROM Store;
