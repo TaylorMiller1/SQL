@@ -1,0 +1,37 @@
+/* Create tables about the people and what they do here */
+
+CREATE TABLE famous_people
+(id INTEGER PRIMARY KEY, name TEXT);
+INSERT INTO famous_people VALUES(1,"Taylor Swift");
+INSERT INTO famous_people VALUES(2,"George Straight"); 
+INSERT INTO famous_people VALUES(3,"Hayley Williams");
+INSERT INTO famous_people VALUES(4,"Luke Bryan");
+INSERT INTO famous_people VALUES(5,"Beyonce");
+INSERT INTO famous_people VALUES(6,"Billie Eilish");
+INSERT INTO famous_people VALUES(7,"Morgan Wallen");
+INSERT INTO famous_people VALUES(8,"Luke Combs");
+INSERT INTO famous_people VALUES(9,"Eminem");
+INSERT INTO famous_people VALUES(10,"Lady Gaga");
+SELECT * FROM famous_people;
+
+CREATE TABLE famous_people_info
+(age INTEGER PRIMARY KEY, name TEXT, id INTEGER, home_state TEXT, married TEXT);
+INSERT INTO famous_people_info VALUES(33,"Taylor Swift",1,"PA","No");
+INSERT INTO famous_people_info VALUES(70,"George Strait",2,"TX","Yes"); 
+INSERT INTO famous_people_info VALUES(34,"Hayley Williams",3,"MS","No");
+INSERT INTO famous_people_info VALUES(46,"Luke Bryan",4,"TN","Yes");
+INSERT INTO famous_people_info VALUES(41,"Beyonce",5,"TX","Yes");
+INSERT INTO famous_people_info VALUES(21,"Billie Eilish",6,"CA","No");
+INSERT INTO famous_people_info VALUES(29,"Morgan Wallen",7,"TN","No");
+INSERT INTO famous_people_info VALUES(32,"Luke Combs",8,"NC","Yes");
+INSERT INTO famous_people_info VALUES(50,"Eminem",9,"MO","No");
+INSERT INTO famous_people_info VALUES(36,"Lady Gaga",10,"NY","No");
+SELECT * FROM famous_people_info;
+
+Here I joined some of the data in the two tables with a Left Join
+
+SELECT famous_people.name,famous_people_info.age
+FROM famous_people
+LEFT JOIN famous_people_info
+ON famous_people.id=famous_people_info.id
+ORDER BY famous_people.name;
